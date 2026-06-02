@@ -21,7 +21,7 @@ Notification), sección **STORIES** y grilla **TRENDING** tipo masonry.
 
 ## 🔗 Repositorio
 
-> Link al repositorio de GitHub: _(completar al subir el proyecto)_
+> Link al repositorio de GitHub: https://github.com/UriSuti/TP7
 
 ---
 
