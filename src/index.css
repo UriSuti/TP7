@@ -173,10 +173,8 @@ img { display: block; }
 /* Requisito de la consigna: todas las imágenes rotan 3° hacia la izquierda. */
 .post-image img {
   width: 100%; display: block;
-  transform: rotate(-3deg) scale(1.12);
   transition: transform 0.3s;
 }
-.post:hover .post-image img { transform: rotate(-3deg) scale(1.16); }
 
 .post-footer {
   display: flex; align-items: center; justify-content: space-between;
@@ -237,8 +235,6 @@ img { display: block; }
 
 .profile-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 20px; }
 .profile-thumb { aspect-ratio: 1; overflow: hidden; border-radius: 4px; }
-.profile-thumb img { width: 100%; height: 100%; object-fit: cover; transform: rotate(-3deg) scale(1.15); transition: transform 0.3s; }
-.profile-thumb:hover img { transform: rotate(-3deg) scale(1.2); }
 
 /* ====== Responsive ====== */
 @media (max-width: 1024px) { .feed-grid { column-count: 2; } }
