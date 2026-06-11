@@ -192,19 +192,6 @@ barra lateral, que cambia el estado `view` a `'profile'`.
 
 ---
 
-## ✨ Detalle de estilo requerido por la consigna
-
-Todas las imágenes de las publicaciones **rotan 3° hacia la izquierda**.
-Se aplica en `index.css` con:
-
-```css
-.post-image img {
-  transform: rotate(-3deg) scale(1.12);
-}
-```
-
----
-
 ## 🛠️ Tecnologías
 
 - React 18
