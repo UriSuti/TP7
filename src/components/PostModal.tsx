@@ -12,6 +12,8 @@ interface PostModalProps {
 export default function PostModal({ post, onClose }: PostModalProps) {
     const [liked, setLiked] = useState(false)
 
+    // Cierra el modal con Escape. El cleanup del efecto remueve el listener
+    // para no acumular handlers si el modal se abre y cierra varias veces.
     useEffect(() => {
         const onKey = (e: KeyboardEvent) => {
             if (e.key === 'Escape') onClose()

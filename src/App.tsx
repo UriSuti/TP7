@@ -17,6 +17,8 @@ export default function App() {
   const [view, setView] = useState<View>('home')
   const [selectedPost, setSelectedPost] = useState<Post | null>(null)
 
+  // La flag `active` evita actualizar el estado si el componente
+  // se desmontó antes de que la promesa resuelva (evita memory leaks).
   useEffect(() => {
     let active = true
     fetchCatPosts(15)

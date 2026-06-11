@@ -11,6 +11,7 @@ interface PostProps {
 export default function Post({ post, onOpen }: PostProps) {
     const [liked, setLiked] = useState(false)
 
+    // stopPropagation evita que el click en "like" abra el modal del post.
     const toggleLike = (e: React.MouseEvent) => {
         e.stopPropagation()
         setLiked((prev) => !prev)

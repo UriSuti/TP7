@@ -13,6 +13,9 @@ const catApi = axios.create({
     baseURL: 'https://api.thecatapi.com/v1',
 })
 
+// Convierte el ID de imagen en un número entero determinístico (djb2).
+// Esto garantiza que el mismo gato siempre tenga el mismo usuario y likes,
+// aunque la página se recargue.
 const hashFrom = (str: string): number => {
     let h = 0
     for (let i = 0; i < str.length; i++) {
@@ -24,6 +27,8 @@ const hashFrom = (str: string): number => {
 
 const pick = <T,>(arr: T[], seed: number): T => arr[seed % arr.length]
 
+// Transforma la respuesta cruda de la API al modelo interno Post,
+// asignando datos ficticios (usuario, caption, likes) de forma reproducible.
 const toPost = (raw: CatApiImage, index: number): Post => {
     const seed = hashFrom(raw.id)
     const daysAgo = (seed % 30) + 1
